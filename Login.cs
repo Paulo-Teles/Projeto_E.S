@@ -24,7 +24,7 @@ namespace RegistrationAndLogin
 
         private void Login_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pedro\Downloads\RegistrationAndLogin\RegistrationAndLogin\Database.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\Database.mdf;Integrated Security=True");
             cn.Open();
         }
 
@@ -50,20 +50,48 @@ namespace RegistrationAndLogin
                     string str = Convert.ToString(cmd.ExecuteScalar());
                     if (str.Equals("Utente"))
                     {
-                        dr.Close();
+                        cmd.CommandText = "SELECT firstname FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string firstname = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT lastname FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string lastname = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT cc FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string cc = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT address FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string address = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT borndate FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string borndate = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT phonenumber FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string phonenumber = Convert.ToString(cmd.ExecuteScalar());
+
                         Utente_Home home = new Utente_Home();
+                        Utente utente = new Utente(firstname,lastname,cc, borndate, address, phonenumber);
+                        dr.Close();
                         home.ShowDialog();
                     }
                     else
                     {
-                        dr.Close();
+                        cmd.CommandText = "SELECT firstname FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string firstname = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT lastname FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string lastname = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT cc FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string cc = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT address FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string address = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT borndate FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string borndate = Convert.ToString(cmd.ExecuteScalar());
+                        cmd.CommandText = "SELECT phonenumber FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
+                        string phonenumber = Convert.ToString(cmd.ExecuteScalar());
+
                         Terapeuta_Home home = new Terapeuta_Home();
+                        Terapeuta terapeuta = new Terapeuta(firstname, lastname, cc, borndate, address, phonenumber);
+                        dr.Close();
                         home.ShowDialog();
                     }
                 }
                 else
                 {
-                    dr.Close();
+                    //dr.Close();
                     MessageBox.Show("No Account avilable with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -72,6 +100,7 @@ namespace RegistrationAndLogin
             {
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            dr.Close();
         }
 
     }

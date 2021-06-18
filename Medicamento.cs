@@ -8,5 +8,11 @@ namespace RegistrationAndLogin
 {
     class Medicamento
     {
+        public string Name { get; set; }
+
+        public Medicamento(string name)
+        {
+            this.Name = name;
+        }
     }
 }

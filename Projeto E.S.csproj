@@ -67,6 +67,7 @@
     <Compile Include="Invoker.cs" />
     <Compile Include="Medicamento.cs" />
     <Compile Include="New_Prescricao_Command.cs" />
+    <Compile Include="Prescricao.cs" />
     <Compile Include="Show_Prescricoes_Command.cs" />
     <Compile Include="Start_Session_Command.cs" />
     <Compile Include="Terapeuta.cs" />

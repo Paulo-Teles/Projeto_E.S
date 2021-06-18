@@ -40,27 +40,24 @@ namespace RegistrationAndLogin
 
         private void Registration_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pedro\Downloads\RegistrationAndLogin\RegistrationAndLogin\Database.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\Database.mdf;Integrated Security=True");
             cn.Open();
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            if (txtconfirmpassword.Text != string.Empty && txtpassword.Text != string.Empty && txtusername.Text != string.Empty && txtaddress.Text != string.Empty && txtfirstname.Text != string.Empty && txtlastname.Text != string.Empty && txtphonenumber.Text != string.Empty && txtborndate.Text != string.Empty)
+            if (txtconfirmpassword.Text != string.Empty && txtpassword.Text != string.Empty && txtusername.Text != string.Empty && txtaddress.Text != string.Empty && txtfirstname.Text != string.Empty && txtlastname.Text != string.Empty && txtphonenumber.Text != string.Empty && txtborndate.Text != string.Empty && txtcc.Text != string.Empty)
             {
                 if (txtpassword.Text == txtconfirmpassword.Text)
                 {
                     cmd = new SqlCommand("select * from LoginTable where username='" + txtusername.Text + "'", cn);
                     dr = cmd.ExecuteReader();
                     if (dr.Read())
-                    {
-                        dr.Close();
-                        MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {                        MessageBox.Show("Username Already exist please try another ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        dr.Close();
-                        cmd = new SqlCommand("insert into LoginTable values(@username,@password,@address,@firstname,@lastname,@phonenumber,@borndate,@type)", cn);
+                        cmd = new SqlCommand("insert into LoginTable values(@username,@password,@address,@phonenumber,@firstname,@lastname,@borndate,@type,@cc)", cn);
                         cmd.Parameters.AddWithValue("username", txtusername.Text);
                         cmd.Parameters.AddWithValue("password", txtpassword.Text);
                         cmd.Parameters.AddWithValue("address", txtaddress.Text);
@@ -68,6 +65,7 @@ namespace RegistrationAndLogin
                         cmd.Parameters.AddWithValue("lastname", txtlastname.Text);
                         cmd.Parameters.AddWithValue("phonenumber", txtphonenumber.Text);
                         cmd.Parameters.AddWithValue("borndate", txtborndate.Text);
+                        cmd.Parameters.AddWithValue("cc", txtcc.Text);
                         if (Utente.Checked)
                         {
                             cmd.Parameters.AddWithValue("type", "Utente");
@@ -76,6 +74,7 @@ namespace RegistrationAndLogin
                         {
                             cmd.Parameters.AddWithValue("type", "Terapeuta");
                         }
+                        dr.Close();
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Your Account is created . Please login now.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -89,6 +88,7 @@ namespace RegistrationAndLogin
             {
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            dr.Close();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -124,6 +124,11 @@ namespace RegistrationAndLogin
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

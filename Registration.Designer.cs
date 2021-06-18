@@ -47,8 +47,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Utente = new System.Windows.Forms.RadioButton();
             this.Terapeuta = new System.Windows.Forms.RadioButton();
+            this.Utente = new System.Windows.Forms.RadioButton();
+            this.txtcc = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +91,7 @@
             // 
             this.txtusername.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.Location = new System.Drawing.Point(170, 29);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(2);
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(168, 30);
             this.txtusername.TabIndex = 1;
@@ -98,7 +100,7 @@
             // 
             this.txtpassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.Location = new System.Drawing.Point(170, 84);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(168, 30);
@@ -109,7 +111,7 @@
             // 
             this.txtconfirmpassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtconfirmpassword.Location = new System.Drawing.Point(170, 136);
-            this.txtconfirmpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtconfirmpassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtconfirmpassword.Name = "txtconfirmpassword";
             this.txtconfirmpassword.PasswordChar = '*';
             this.txtconfirmpassword.Size = new System.Drawing.Size(168, 30);
@@ -118,8 +120,8 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(123, 509);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Location = new System.Drawing.Point(113, 549);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(135, 34);
             this.btnRegister.TabIndex = 4;
@@ -130,8 +132,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(72, 560);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(70, 587);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 32);
             this.button1.TabIndex = 5;
@@ -247,10 +249,22 @@
             // 
             this.panel1.Controls.Add(this.Terapeuta);
             this.panel1.Controls.Add(this.Utente);
-            this.panel1.Location = new System.Drawing.Point(52, 455);
+            this.panel1.Location = new System.Drawing.Point(18, 504);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(332, 40);
             this.panel1.TabIndex = 16;
+            // 
+            // Terapeuta
+            // 
+            this.Terapeuta.AutoSize = true;
+            this.Terapeuta.Location = new System.Drawing.Point(210, 4);
+            this.Terapeuta.Name = "Terapeuta";
+            this.Terapeuta.Size = new System.Drawing.Size(74, 17);
+            this.Terapeuta.TabIndex = 1;
+            this.Terapeuta.TabStop = true;
+            this.Terapeuta.Text = "Terapeuta";
+            this.Terapeuta.UseVisualStyleBackColor = true;
+            this.Terapeuta.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Utente
             // 
@@ -265,23 +279,34 @@
             this.Utente.UseVisualStyleBackColor = true;
             this.Utente.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // Terapeuta
+            // txtcc
             // 
-            this.Terapeuta.AutoSize = true;
-            this.Terapeuta.Location = new System.Drawing.Point(210, 4);
-            this.Terapeuta.Name = "Terapeuta";
-            this.Terapeuta.Size = new System.Drawing.Size(74, 17);
-            this.Terapeuta.TabIndex = 1;
-            this.Terapeuta.TabStop = true;
-            this.Terapeuta.Text = "Terapeuta";
-            this.Terapeuta.UseVisualStyleBackColor = true;
-            this.Terapeuta.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.txtcc.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcc.Location = new System.Drawing.Point(170, 455);
+            this.txtcc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcc.Name = "txtcc";
+            this.txtcc.Size = new System.Drawing.Size(168, 30);
+            this.txtcc.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(14, 458);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 23);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "C.C Number";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 603);
+            this.ClientSize = new System.Drawing.Size(382, 629);
+            this.Controls.Add(this.txtcc);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtborndate);
             this.Controls.Add(this.txtlastname);
@@ -301,7 +326,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
             this.Name = "Registration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -337,5 +362,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton Terapeuta;
         private System.Windows.Forms.RadioButton Utente;
+        private System.Windows.Forms.TextBox txtcc;
+        private System.Windows.Forms.Label label7;
     }
 }
