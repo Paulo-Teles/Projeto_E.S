@@ -49,6 +49,8 @@
             this.Terapeuta = new System.Windows.Forms.RadioButton();
             this.Utente = new System.Windows.Forms.RadioButton();
             this.BornDate = new System.Windows.Forms.DateTimePicker();
+            this.txtcc = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +121,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(123, 509);
+            this.btnRegister.Location = new System.Drawing.Point(111, 552);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(135, 34);
@@ -131,7 +133,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(72, 560);
+            this.button1.Location = new System.Drawing.Point(76, 590);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 32);
@@ -239,7 +241,7 @@
             // 
             this.panel1.Controls.Add(this.Terapeuta);
             this.panel1.Controls.Add(this.Utente);
-            this.panel1.Location = new System.Drawing.Point(52, 455);
+            this.panel1.Location = new System.Drawing.Point(39, 507);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(332, 40);
             this.panel1.TabIndex = 16;
@@ -278,11 +280,35 @@
             this.BornDate.TabIndex = 17;
             this.BornDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // txtcc
+            // 
+            this.txtcc.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcc.Location = new System.Drawing.Point(169, 456);
+            this.txtcc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcc.Name = "txtcc";
+            this.txtcc.Size = new System.Drawing.Size(168, 30);
+            this.txtcc.TabIndex = 19;
+            this.txtcc.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 456);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 23);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "C.C";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 603);
+            this.ClientSize = new System.Drawing.Size(429, 633);
+            this.Controls.Add(this.txtcc);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.BornDate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtlastname);
@@ -338,5 +364,7 @@
         private System.Windows.Forms.RadioButton Terapeuta;
         private System.Windows.Forms.RadioButton Utente;
         private System.Windows.Forms.DateTimePicker BornDate;
+        private System.Windows.Forms.TextBox txtcc;
+        private System.Windows.Forms.Label label7;
     }
 }

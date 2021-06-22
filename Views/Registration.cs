@@ -40,13 +40,13 @@ namespace RegistrationAndLogin
 
         private void Registration_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\Projeto_E.S\Database.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\Database.mdf;Integrated Security=True");
             cn.Open();
         }
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            if (txtconfirmpassword.Text != string.Empty && txtpassword.Text != string.Empty && txtusername.Text != string.Empty && txtaddress.Text != string.Empty && txtfirstname.Text != string.Empty && txtlastname.Text != string.Empty && txtphonenumber.Text != string.Empty && BornDate.Text != string.Empty)
+            if (txtconfirmpassword.Text != string.Empty && txtpassword.Text != string.Empty && txtusername.Text != string.Empty && txtaddress.Text != string.Empty && txtfirstname.Text != string.Empty && txtlastname.Text != string.Empty && txtphonenumber.Text != string.Empty && BornDate.Text != string.Empty && txtcc.Text != string.Empty)
             {
                 if (txtpassword.Text == txtconfirmpassword.Text)
                 {
@@ -60,7 +60,7 @@ namespace RegistrationAndLogin
                     else
                     {
                         dr.Close();
-                        cmd = new SqlCommand("insert into LoginTable values(@username,@password,@address,@firstname,@lastname,@phonenumber,@borndate,@type)", cn);
+                        cmd = new SqlCommand("insert into LoginTable values(@username,@password,@address,@firstname,@lastname,@phonenumber,@borndate,@type,@cc)", cn);
                         cmd.Parameters.AddWithValue("username", txtusername.Text);
                         cmd.Parameters.AddWithValue("password", txtpassword.Text);
                         cmd.Parameters.AddWithValue("address", txtaddress.Text);
@@ -68,6 +68,7 @@ namespace RegistrationAndLogin
                         cmd.Parameters.AddWithValue("lastname", txtlastname.Text);
                         cmd.Parameters.AddWithValue("phonenumber", txtphonenumber.Text);
                         cmd.Parameters.AddWithValue("borndate", BornDate.Value);
+                        cmd.Parameters.AddWithValue("cc", txtcc.Text);
                         if (Utente.Checked)
                         {
                             cmd.Parameters.AddWithValue("type", "Utente");
@@ -135,6 +136,16 @@ namespace RegistrationAndLogin
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

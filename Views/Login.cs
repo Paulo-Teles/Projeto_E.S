@@ -24,7 +24,7 @@ namespace RegistrationAndLogin
 
         private void Login_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\Projeto_E.S\Database.mdf;Integrated Security=True");
+            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\Database.mdf;Integrated Security=True");
             cn.Open();
         }
 

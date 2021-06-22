@@ -47,3 +47,28 @@ C:\Users\nunom\OneDrive\Ambiente de Trabalho\projeto 02\Projeto_E.S\obj\Debug\Re
 C:\Users\nunom\OneDrive\Ambiente de Trabalho\projeto 02\Projeto_E.S\obj\Debug\RegistrationAndLogin.Disponibilizar_Prescrição.resources
 C:\Users\nunom\OneDrive\Ambiente de Trabalho\projeto 02\Projeto_E.S\obj\Debug\RegistrationAndLogin.ConsultarPrescrições.resources
 C:\Users\nunom\OneDrive\Ambiente de Trabalho\projeto 02\Projeto_E.S\obj\Debug\RegistrationAndLogin.HistoricoPescrição.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\Projeto E.S.csprojAssemblyReference.cache
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.CriarPrescricao.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.HistoricoTerapeuta.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Terapeuta_Home.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.ConsultarPrescrições.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Disponibilizar_Prescrição.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.HistoricoPescrição.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Utente_Home.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Login.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Properties.Resources.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Registration.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\Projeto E.S.csproj.GenerateResource.cache
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\Projeto E.S.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.exe
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.pdb
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\Database.mdf
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\Database_log.ldf
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\RegistrationAndLogin.exe.config
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\RegistrationAndLogin.exe
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\RegistrationAndLogin.pdb
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramework.dll
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramework.xml
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\Projeto E.S.csproj.CopyComplete

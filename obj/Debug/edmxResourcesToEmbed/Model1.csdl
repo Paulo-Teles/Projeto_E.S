@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ExerciciosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MedicamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExerciciosTableId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prescrição">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CC_Utente" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Data" Type="DateTime" Precision="3" />
+    <Property Name="Tratamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exercicio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Medicamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CC_Terapeuta_autor" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="idSessão" Type="Int32" />
+    <Property Name="info_medicamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TerapeutaTable" Relationship="DatabaseModel.TerapeutaTablePrescrição" FromRole="Prescrição" ToRole="TerapeutaTable" />
+    <Property Name="TerapeutaTableId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UtenteTable" Relationship="DatabaseModel.UtenteTablePrescrição" FromRole="Prescrição" ToRole="UtenteTable" />
+    <Property Name="UtenteTableId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prescrição_ExercíciosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ExerciciosTable" Relationship="DatabaseModel.Prescrição_ExercíciosTableExerciciosTable" FromRole="Prescrição_ExercíciosTable" ToRole="ExerciciosTable" />
+    <Property Name="ExerciciosTableId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Prescrição" Relationship="DatabaseModel.Prescrição_ExercíciosTablePrescrição" FromRole="Prescrição_ExercíciosTable" ToRole="Prescrição" />
+    <Property Name="PrescriçãoId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prescrição_MedicamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="PrescriçãoId" Type="Int32" Nullable="false" />
+    <Property Name="MedicamentosTableId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prescrição_TratamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SessãoTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="utente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+    <Property Name="tratamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="master_terapeuta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UtenteTable" Relationship="DatabaseModel.UtenteTableSessãoTable" FromRole="SessãoTable" ToRole="UtenteTable" />
+    <Property Name="UtenteTableId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TerapeutaTable" Relationship="DatabaseModel.TerapeutaTableSessãoTable" FromRole="SessãoTable" ToRole="TerapeutaTable" />
+    <Property Name="TerapeutaTableId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TerapeutaTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="borndate" Type="DateTime" Precision="3" />
+    <Property Name="cc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Prescrição" Relationship="DatabaseModel.TerapeutaTablePrescrição" FromRole="TerapeutaTable" ToRole="Prescrição" />
+    <NavigationProperty Name="SessãoTable" Relationship="DatabaseModel.TerapeutaTableSessãoTable" FromRole="TerapeutaTable" ToRole="SessãoTable" />
+  </EntityType>
+  <EntityType Name="TratamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="UtenteTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="borndate" Type="DateTime" Precision="3" />
+    <Property Name="cc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SessãoTable" Relationship="DatabaseModel.UtenteTableSessãoTable" FromRole="UtenteTable" ToRole="SessãoTable" />
+    <NavigationProperty Name="Prescrição" Relationship="DatabaseModel.UtenteTablePrescrição" FromRole="UtenteTable" ToRole="Prescrição" />
+  </EntityType>
+  <EntityContainer Name="DatabaseEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ExerciciosTable" EntityType="Self.ExerciciosTable" />
+    <EntitySet Name="MedicamentosTable" EntityType="Self.MedicamentosTable" />
+    <EntitySet Name="Prescrição" EntityType="Self.Prescrição" />
+    <EntitySet Name="Prescrição_ExercíciosTable" EntityType="Self.Prescrição_ExercíciosTable" />
+    <EntitySet Name="Prescrição_MedicamentosTable" EntityType="Self.Prescrição_MedicamentosTable" />
+    <EntitySet Name="Prescrição_TratamentosTable" EntityType="Self.Prescrição_TratamentosTable" />
+    <EntitySet Name="SessãoTable" EntityType="Self.SessãoTable" />
+    <EntitySet Name="TerapeutaTable" EntityType="Self.TerapeutaTable" />
+    <EntitySet Name="TratamentosTable" EntityType="Self.TratamentosTable" />
+    <EntitySet Name="UtenteTable" EntityType="Self.UtenteTable" />
+    <AssociationSet Name="TerapeutaTablePrescrição" Association="DatabaseModel.TerapeutaTablePrescrição">
+      <End Role="TerapeutaTable" EntitySet="TerapeutaTable" />
+      <End Role="Prescrição" EntitySet="Prescrição" />
+    </AssociationSet>
+    <AssociationSet Name="UtenteTableSessãoTable" Association="DatabaseModel.UtenteTableSessãoTable">
+      <End Role="UtenteTable" EntitySet="UtenteTable" />
+      <End Role="SessãoTable" EntitySet="SessãoTable" />
+    </AssociationSet>
+    <AssociationSet Name="TerapeutaTableSessãoTable" Association="DatabaseModel.TerapeutaTableSessãoTable">
+      <End Role="TerapeutaTable" EntitySet="TerapeutaTable" />
+      <End Role="SessãoTable" EntitySet="SessãoTable" />
+    </AssociationSet>
+    <AssociationSet Name="UtenteTablePrescrição" Association="DatabaseModel.UtenteTablePrescrição">
+      <End Role="UtenteTable" EntitySet="UtenteTable" />
+      <End Role="Prescrição" EntitySet="Prescrição" />
+    </AssociationSet>
+    <AssociationSet Name="Prescrição_ExercíciosTableExerciciosTable" Association="DatabaseModel.Prescrição_ExercíciosTableExerciciosTable">
+      <End Role="Prescrição_ExercíciosTable" EntitySet="Prescrição_ExercíciosTable" />
+      <End Role="ExerciciosTable" EntitySet="ExerciciosTable" />
+    </AssociationSet>
+    <AssociationSet Name="Prescrição_ExercíciosTablePrescrição" Association="DatabaseModel.Prescrição_ExercíciosTablePrescrição">
+      <End Role="Prescrição_ExercíciosTable" EntitySet="Prescrição_ExercíciosTable" />
+      <End Role="Prescrição" EntitySet="Prescrição" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="TerapeutaTablePrescrição">
+    <End Type="DatabaseModel.TerapeutaTable" Role="TerapeutaTable" Multiplicity="1" />
+    <End Type="DatabaseModel.Prescrição" Role="Prescrição" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TerapeutaTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prescrição">
+        <PropertyRef Name="TerapeutaTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UtenteTableSessãoTable">
+    <End Type="DatabaseModel.UtenteTable" Role="UtenteTable" Multiplicity="1" />
+    <End Type="DatabaseModel.SessãoTable" Role="SessãoTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UtenteTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SessãoTable">
+        <PropertyRef Name="UtenteTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TerapeutaTableSessãoTable">
+    <End Type="DatabaseModel.TerapeutaTable" Role="TerapeutaTable" Multiplicity="1" />
+    <End Type="DatabaseModel.SessãoTable" Role="SessãoTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TerapeutaTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SessãoTable">
+        <PropertyRef Name="TerapeutaTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UtenteTablePrescrição">
+    <End Type="DatabaseModel.UtenteTable" Role="UtenteTable" Multiplicity="1" />
+    <End Type="DatabaseModel.Prescrição" Role="Prescrição" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UtenteTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prescrição">
+        <PropertyRef Name="UtenteTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Prescrição_ExercíciosTableExerciciosTable">
+    <End Type="DatabaseModel.Prescrição_ExercíciosTable" Role="Prescrição_ExercíciosTable" Multiplicity="*" />
+    <End Type="DatabaseModel.ExerciciosTable" Role="ExerciciosTable" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ExerciciosTable">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prescrição_ExercíciosTable">
+        <PropertyRef Name="ExerciciosTableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Prescrição_ExercíciosTablePrescrição">
+    <End Type="DatabaseModel.Prescrição_ExercíciosTable" Role="Prescrição_ExercíciosTable" Multiplicity="*" />
+    <End Type="DatabaseModel.Prescrição" Role="Prescrição" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Prescrição">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Prescrição_ExercíciosTable">
+        <PropertyRef Name="PrescriçãoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

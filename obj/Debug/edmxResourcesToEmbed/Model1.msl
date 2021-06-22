@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities3">
+    <EntitySetMapping Name="ExerciciosTable">
+      <EntityTypeMapping TypeName="DatabaseModel.ExerciciosTable">
+        <MappingFragment StoreEntitySet="ExerciciosTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedicamentosTable">
+      <EntityTypeMapping TypeName="DatabaseModel.MedicamentosTable">
+        <MappingFragment StoreEntitySet="MedicamentosTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescrição">
+      <EntityTypeMapping TypeName="DatabaseModel.Prescrição">
+        <MappingFragment StoreEntitySet="Prescrição">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CC_Utente" ColumnName="CC_Utente" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Tratamento" ColumnName="Tratamento" />
+          <ScalarProperty Name="Exercicio" ColumnName="Exercicio" />
+          <ScalarProperty Name="Medicamento" ColumnName="Medicamento" />
+          <ScalarProperty Name="CC_Terapeuta_autor" ColumnName="CC_Terapeuta_autor" />
+          <ScalarProperty Name="idSessão" ColumnName="idSessão" />
+          <ScalarProperty Name="info_medicamento" ColumnName="info_medicamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescrição_ExercíciosTable">
+      <EntityTypeMapping TypeName="DatabaseModel.Prescrição_ExercíciosTable">
+        <MappingFragment StoreEntitySet="Prescrição_ExercíciosTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescrição_MedicamentosTable">
+      <EntityTypeMapping TypeName="DatabaseModel.Prescrição_MedicamentosTable">
+        <MappingFragment StoreEntitySet="Prescrição_MedicamentosTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescrição_TratamentosTable">
+      <EntityTypeMapping TypeName="DatabaseModel.Prescrição_TratamentosTable">
+        <MappingFragment StoreEntitySet="Prescrição_TratamentosTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessãoTable">
+      <EntityTypeMapping TypeName="DatabaseModel.SessãoTable">
+        <MappingFragment StoreEntitySet="SessãoTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="utente" ColumnName="utente" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="tratamento" ColumnName="tratamento" />
+          <ScalarProperty Name="master_terapeuta" ColumnName="master_terapeuta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TerapeutaTable">
+      <EntityTypeMapping TypeName="DatabaseModel.TerapeutaTable">
+        <MappingFragment StoreEntitySet="TerapeutaTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="borndate" ColumnName="borndate" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TratamentosTable">
+      <EntityTypeMapping TypeName="DatabaseModel.TratamentosTable">
+        <MappingFragment StoreEntitySet="TratamentosTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UtenteTable">
+      <EntityTypeMapping TypeName="DatabaseModel.UtenteTable">
+        <MappingFragment StoreEntitySet="UtenteTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="borndate" ColumnName="borndate" />
+          <ScalarProperty Name="cc" ColumnName="cc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

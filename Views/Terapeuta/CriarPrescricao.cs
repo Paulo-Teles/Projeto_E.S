@@ -46,9 +46,10 @@ namespace RegistrationAndLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty || textBox3.Text != string.Empty || textBox4.Text != string.Empty)
             {
-
+                
                 cmd = new SqlCommand("select * from LoginTable where username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
@@ -81,7 +82,9 @@ namespace RegistrationAndLogin
             {
                 MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            */
 
         }
+            
     }
 }
