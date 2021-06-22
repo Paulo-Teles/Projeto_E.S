@@ -74,3 +74,28 @@ C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramew
 C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\Projeto E.S.csproj.CopyComplete
 C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Migrations.InitialCreate.resources
 C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Migrations.Adicionar.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\RegistrationAndLogin.exe.config
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\RegistrationAndLogin.exe
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\RegistrationAndLogin.pdb
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\ES projeto\projeto\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\Projeto E.S.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Migrations.InitialCreate.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Migrations.Adicionar.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.CriarPrescricao.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.HistoricoTerapeuta.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Terapeuta_Home.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.ConsultarPrescrições.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Disponibilizar_Prescrição.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.HistoricoPescrição.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Utente_Home.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Login.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Properties.Resources.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.Registration.resources
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\Projeto E.S.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\Projeto E.S.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\Projeto E.S.csproj.CopyComplete
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.exe
+C:\Users\Admin\Desktop\ES projeto\projeto\obj\Debug\RegistrationAndLogin.pdb
