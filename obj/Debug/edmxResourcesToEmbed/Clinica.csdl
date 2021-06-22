@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ExerciciosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MedicamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Prescrição">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CC_Utente" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="Data" Type="DateTime" Precision="3" />
+    <Property Name="Tratamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exercicio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Medicamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CC_Terapeuta_autor" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="idSessão" Type="Int32" />
+    <Property Name="info_medicamento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SessãoTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="utente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+    <Property Name="tratamento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="master_terapeuta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TerapeutaTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="borndate" Type="DateTime" Precision="3" />
+    <Property Name="cc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TratamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="data" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="UtenteTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="borndate" Type="DateTime" Precision="3" />
+    <Property Name="cc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ExerciciosTable" EntityType="Self.ExerciciosTable" />
+    <EntitySet Name="MedicamentosTable" EntityType="Self.MedicamentosTable" />
+    <EntitySet Name="Prescrição" EntityType="Self.Prescrição" />
+    <EntitySet Name="SessãoTable" EntityType="Self.SessãoTable" />
+    <EntitySet Name="TerapeutaTable" EntityType="Self.TerapeutaTable" />
+    <EntitySet Name="TratamentosTable" EntityType="Self.TratamentosTable" />
+    <EntitySet Name="UtenteTable" EntityType="Self.UtenteTable" />
+  </EntityContainer>
+</Schema>

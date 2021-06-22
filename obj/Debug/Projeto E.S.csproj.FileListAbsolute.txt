@@ -72,3 +72,5 @@ C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramew
 C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramework.xml
 C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\Projeto E.S.csproj.CopyComplete
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Migrations.InitialCreate.resources
+C:\Users\pedro\Downloads\RegistrationAndLogin\Projeto_E.S\obj\Debug\RegistrationAndLogin.Migrations.Adicionar.resources

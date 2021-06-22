@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ExerciciosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MedicamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Prescrição">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="CC_Utente" Type="nchar" MaxLength="50" />
+    <Property Name="Data" Type="datetime" />
+    <Property Name="Tratamento" Type="nvarchar(max)" />
+    <Property Name="Exercicio" Type="nvarchar(max)" />
+    <Property Name="Medicamento" Type="nvarchar(max)" />
+    <Property Name="CC_Terapeuta_autor" Type="nchar" MaxLength="50" />
+    <Property Name="idSessão" Type="int" />
+    <Property Name="info_medicamento" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="SessãoTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="utente" Type="nvarchar" MaxLength="50" />
+    <Property Name="data" Type="date" />
+    <Property Name="tratamento" Type="nvarchar" MaxLength="50" />
+    <Property Name="master_terapeuta" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TerapeutaTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="phonenumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="borndate" Type="datetime" />
+    <Property Name="cc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TratamentosTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="nome" Type="nvarchar" MaxLength="50" />
+    <Property Name="data" Type="date" />
+  </EntityType>
+  <EntityType Name="UtenteTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="phonenumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="borndate" Type="datetime" />
+    <Property Name="cc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="DatabaseModelStoreContainer">
+    <EntitySet Name="ExerciciosTable" EntityType="Self.ExerciciosTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedicamentosTable" EntityType="Self.MedicamentosTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prescrição" EntityType="Self.Prescrição" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SessãoTable" EntityType="Self.SessãoTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TerapeutaTable" EntityType="Self.TerapeutaTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TratamentosTable" EntityType="Self.TratamentosTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UtenteTable" EntityType="Self.UtenteTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

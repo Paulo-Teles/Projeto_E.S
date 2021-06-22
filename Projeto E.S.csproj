@@ -75,6 +75,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command.cs" />
+    <Compile Include="EFContext.cs" />
+    <Compile Include="Migrations\202106221557126_InitialCreate.cs" />
+    <Compile Include="Migrations\202106221557126_InitialCreate.designer.cs">
+      <DependentUpon>202106221557126_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106221653560_Adicionar.cs" />
+    <Compile Include="Migrations\202106221653560_Adicionar.designer.cs">
+      <DependentUpon>202106221653560_Adicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="Views\Utente\ConsultarPrescrições.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +153,12 @@
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202106221557126_InitialCreate.resx">
+      <DependentUpon>202106221557126_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106221653560_Adicionar.resx">
+      <DependentUpon>202106221653560_Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Terapeuta\CriarPrescricao.resx">
       <DependentUpon>CriarPrescricao.cs</DependentUpon>
     </EmbeddedResource>
