@@ -8,12 +8,17 @@ namespace RegistrationAndLogin
 {
     class Exercício
     {
-        public string Name { get; set; }
-      
-        public Exercício(string name)
+        /*
+        public void addExercicio()
         {
-            this.Name = name;
+
         }
+
+        public void delExercicio()
+        {
+
+        }
+        */
 
     }
 }

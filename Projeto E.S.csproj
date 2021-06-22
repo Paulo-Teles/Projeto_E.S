@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,48 +63,95 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command.cs" />
+    <Compile Include="Views\Utente\ConsultarPrescrições.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utente\ConsultarPrescrições.Designer.cs">
+      <DependentUpon>ConsultarPrescrições.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utente\HistoricoPescrição.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utente\HistoricoPescrição.Designer.cs">
+      <DependentUpon>HistoricoPescrição.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utente\Disponibilizar Prescrição.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Utente\Disponibilizar Prescrição.Designer.cs">
+      <DependentUpon>Disponibilizar Prescrição.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Terapeuta\CriarPrescricao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Terapeuta\CriarPrescricao.Designer.cs">
+      <DependentUpon>CriarPrescricao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exercício.cs" />
+    <Compile Include="Views\Terapeuta\HistoricoTerapeuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Terapeuta\HistoricoTerapeuta.Designer.cs">
+      <DependentUpon>HistoricoTerapeuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ICommand.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Medicamento.cs" />
     <Compile Include="New_Prescricao_Command.cs" />
-    <Compile Include="Prescricao.cs" />
     <Compile Include="Show_Prescricoes_Command.cs" />
     <Compile Include="Start_Session_Command.cs" />
     <Compile Include="Terapeuta.cs" />
     <Compile Include="Terapeuta_Acess_Command.cs" />
-    <Compile Include="Terapeuta_Home.cs">
+    <Compile Include="Views\Terapeuta\Terapeuta_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Terapeuta_Home.Designer.cs">
+    <Compile Include="Views\Terapeuta\Terapeuta_Home.Designer.cs">
       <DependentUpon>Terapeuta_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Tratamento.cs" />
     <Compile Include="Utente.cs" />
-    <Compile Include="Utente_Home.cs">
+    <Compile Include="Views\Utente\Utente_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utente_Home.Designer.cs">
+    <Compile Include="Views\Utente\Utente_Home.Designer.cs">
       <DependentUpon>Utente_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Views\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.cs">
+    <Compile Include="Views\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
+    <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Utente_Home.resx">
+    <EmbeddedResource Include="Views\Terapeuta\CriarPrescricao.resx">
+      <DependentUpon>CriarPrescricao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Terapeuta\HistoricoTerapeuta.resx">
+      <DependentUpon>HistoricoTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Terapeuta\Terapeuta_Home.resx">
+      <DependentUpon>Terapeuta_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utente\ConsultarPrescrições.resx">
+      <DependentUpon>ConsultarPrescrições.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utente\Disponibilizar Prescrição.resx">
+      <DependentUpon>Disponibilizar Prescrição.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utente\HistoricoPescrição.resx">
+      <DependentUpon>HistoricoPescrição.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Utente\Utente_Home.resx">
       <DependentUpon>Utente_Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,7 +163,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Registration.resx">
+    <EmbeddedResource Include="Views\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -152,6 +200,5 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

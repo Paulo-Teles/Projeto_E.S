@@ -8,11 +8,16 @@ namespace RegistrationAndLogin
 {
     class Medicamento
     {
-        public string Name { get; set; }
+        /*
+       public void addMedicamento()
+       {
 
-        public Medicamento(string name)
-        {
-            this.Name = name;
-        }
+       }
+
+       public void delMedicamento()
+       {
+
+       }
+       */
     }
 }

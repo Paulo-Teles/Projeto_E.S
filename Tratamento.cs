@@ -8,13 +8,16 @@ namespace RegistrationAndLogin
 {
     class Tratamento
     {
-        public string Name { get; set; }
-        public DateTime Data { get; set; }
+        /*
+         public void addTratamento()
+         {
 
-        public Tratamento(string name, DateTime data)
-        {
-            this.Name = name;
-            this.Data = data;
-        }
+         }
+
+         public void delExercicio()
+         {
+
+         }
+         */
     }
 }

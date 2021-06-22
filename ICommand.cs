@@ -12,5 +12,3 @@ namespace RegistrationAndLogin
         void unexecute();
     }
 }
-
-
