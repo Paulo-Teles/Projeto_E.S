@@ -8,17 +8,6 @@ namespace RegistrationAndLogin
 {
     class Exercício
     {
-        /*
-        public void addExercicio()
-        {
-
-        }
-
-        public void delExercicio()
-        {
-
-        }
-        */
 
     }
 }

@@ -24,5 +24,15 @@ namespace RegistrationAndLogin
         {
 
         }
+
+        public void See_history()
+        {
+
+        }
+
+        public void Check_date(DateTime data)
+        {
+            
+        }
     }
 }

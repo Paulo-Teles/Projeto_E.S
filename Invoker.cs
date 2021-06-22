@@ -23,22 +23,22 @@ namespace RegistrationAndLogin
 
         public void Give_Terapeuta_Acess()
         {
-            this.Terapeuta_Acess.execute();
+            this.Terapeuta_Acess.Execute();
         }
 
         public void Display_Prescriptions()
         {
-            this.Show_Prescricoes.execute();
+            this.Show_Prescricoes.Execute();
         }
 
         public void Add_Prescription()
         {
-            this.New_Prescricao.execute();
+            this.New_Prescricao.Execute();
         }
 
         public void Start_THe_Session()
         {
-            this.Start_Session.execute();
+            this.Start_Session.Execute();
         }
     }
 }

@@ -17,12 +17,18 @@ namespace RegistrationAndLogin
         public string Phonenumber { get; set; }
         public DateTime Borndate { get; set; }
         public string CC { get; set; }
-        public void New_Prescription()
+
+        public void New_Prescription(Prescricao prescricao, Utente utente)
         {
 
         }
 
-        public void Start_Session()
+        public void Start_Session(Utente utente)
+        {
+
+        }
+
+        public void See_history(Utente utente)
         {
 
         }

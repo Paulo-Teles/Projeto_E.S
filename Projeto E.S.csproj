@@ -74,7 +74,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command.cs" />
     <Compile Include="EFContext.cs" />
     <Compile Include="Migrations\202106221557126_InitialCreate.cs" />
     <Compile Include="Migrations\202106221557126_InitialCreate.designer.cs">
@@ -85,7 +84,9 @@
       <DependentUpon>202106221653560_Adicionar.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Prescricao.cs" />
+    <Compile Include="TerapeutaCommand.cs" />
+    <Compile Include="UtenteCommand.cs" />
     <Compile Include="Views\Utente\ConsultarPrescrições.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +121,7 @@
     <Compile Include="ICommand.cs" />
     <Compile Include="Invoker.cs" />
     <Compile Include="Medicamento.cs" />
-    <Compile Include="New_Prescricao_Command.cs" />
-    <Compile Include="Show_Prescricoes_Command.cs" />
-    <Compile Include="Start_Session_Command.cs" />
     <Compile Include="Terapeuta.cs" />
-    <Compile Include="Terapeuta_Acess_Command.cs" />
     <Compile Include="Views\Terapeuta\Terapeuta_Home.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,16 +8,6 @@ namespace RegistrationAndLogin
 {
     class Tratamento
     {
-        /*
-         public void addTratamento()
-         {
 
-         }
-
-         public void delExercicio()
-         {
-
-         }
-         */
     }
 }

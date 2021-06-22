@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RegistrationAndLogin
 {
-    class Start_Session_Command
+    public class UtenteCommand : ICommand
     {
+        Utente utente;
+        public void Execute()
+        {
+            
+        }
     }
 }

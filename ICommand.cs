@@ -8,7 +8,6 @@ namespace RegistrationAndLogin
 {
     interface ICommand
     {
-        void execute();
-        void unexecute();
+        void Execute();
     }
 }
