@@ -48,12 +48,6 @@ namespace RegistrationAndLogin
                 {
                     if (Utente.Checked)
                     {
-                        UserFactory factory = null;
-                        factory = new UtenteFactory(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
-                        User user = factory.GetUser();
-                        Console.WriteLine("\nYour details are below : \n");
-                        Console.WriteLine("firstname: {0}\naddress: {1}\nphonenumber: {2}",
-                            user.FirstName, user.Address, user.Phonenumber);
                         try
                         {
                             using (var ctx = new EFContext())
@@ -75,7 +69,7 @@ namespace RegistrationAndLogin
                         {
                             using (var ctx = new EFContext())
                             {
-                                Terapeuta terapeuta = new Terapeuta() { FirstName = txtfirstname.Text, Lastname = txtlastname.Text, Address = txtaddress.Text, Borndate = BornDate.Value, CC = txtcc.Text, Password = txtpassword.Text, Phonenumber = txtphonenumber.Text, Username = txtusername.Text };
+                                Terapeuta terapeuta = new Terapeuta(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
                                 ctx.Terapeutas.Add(terapeuta);
                                 ctx.SaveChanges();
                             }
