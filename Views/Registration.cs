@@ -47,12 +47,17 @@ namespace RegistrationAndLogin
                 if (txtpassword.Text == txtconfirmpassword.Text)
                 {
                     if (Utente.Checked)
+                    {
+                        UserFactory factory = null;
+                        factory = new UtenteFactory(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
+                        User user = factory.GetUser();
+                        Console.WriteLine("\nYour details are below : \n");
+                        Console.WriteLine("firstname: {0}\naddress: {1}\nphonenumber: {2}",
+                            user.FirstName, user.Address, user.Phonenumber);
                         try
                         {
                             using (var ctx = new EFContext())
                             {
-                                UserFactory factory = null;
-                                factory = new Utente(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
                                 Utente utente = new Utente(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
                                 ctx.Utentes.Add(utente);
                                 ctx.SaveChanges();
@@ -63,6 +68,7 @@ namespace RegistrationAndLogin
                             Console.WriteLine("Erro ao criar utente");
                             Console.WriteLine(ex.Message);
                         }
+                    }
                     else
                     {
                         try
