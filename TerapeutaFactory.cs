@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace RegistrationAndLogin
 {
-    public class Medicamento
+    class TerapeutaFactory
     {
-        public int MedicamentoID { get; set; }
-        public string Nome { get; set; }
     }
 }

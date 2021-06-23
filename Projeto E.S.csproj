@@ -75,18 +75,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFContext.cs" />
-    <Compile Include="Migrations\202106221557126_InitialCreate.cs" />
-    <Compile Include="Migrations\202106221557126_InitialCreate.designer.cs">
-      <DependentUpon>202106221557126_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106221653560_Adicionar.cs" />
-    <Compile Include="Migrations\202106221653560_Adicionar.designer.cs">
-      <DependentUpon>202106221653560_Adicionar.cs</DependentUpon>
+    <Compile Include="Migrations\202106231326267_Initial.cs" />
+    <Compile Include="Migrations\202106231326267_Initial.designer.cs">
+      <DependentUpon>202106231326267_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Prescricao.cs" />
     <Compile Include="TerapeutaCommand.cs" />
+    <Compile Include="TerapeutaFactory.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserFactory.cs" />
     <Compile Include="UtenteCommand.cs" />
+    <Compile Include="UtenteFactory.cs" />
     <Compile Include="Views\Utente\ConsultarPrescrições.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,7 +111,7 @@
     <Compile Include="Views\Terapeuta\CriarPrescricao.Designer.cs">
       <DependentUpon>CriarPrescricao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Exercício.cs" />
+    <Compile Include="Exercicio.cs" />
     <Compile Include="Views\Terapeuta\HistoricoTerapeuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,11 +150,8 @@
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202106221557126_InitialCreate.resx">
-      <DependentUpon>202106221557126_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106221653560_Adicionar.resx">
-      <DependentUpon>202106221653560_Adicionar.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106231326267_Initial.resx">
+      <DependentUpon>202106231326267_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Terapeuta\CriarPrescricao.resx">
       <DependentUpon>CriarPrescricao.cs</DependentUpon>

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace RegistrationAndLogin
 {
-    public class Medicamento
+    abstract class UserFactory
     {
-        public int MedicamentoID { get; set; }
-        public string Nome { get; set; }
+        public abstract User GetUser();
     }
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace RegistrationAndLogin
 {
-    class Tratamento
+    public class Tratamento
     {
-
+        public int TratamentoID { get; set; }
+        public string Nome { get; set; }
     }
 }

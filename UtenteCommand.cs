@@ -8,7 +8,7 @@ namespace RegistrationAndLogin
 {
     public class UtenteCommand : ICommand
     {
-        Utente utente;
+        Utente Utente;
         public void Execute()
         {
             

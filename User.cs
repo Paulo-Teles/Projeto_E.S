@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace RegistrationAndLogin
 {
-    public class Utente:User
+    public class User
     {
-        private read
-        public int UtenteID { get; set; }
+        public string UserType { get ; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Address { get; set; }
@@ -19,21 +18,5 @@ namespace RegistrationAndLogin
         public DateTime Borndate { get; set; }
         public string CC { get; set; }
 
-
-
-        public void Terapeuta_Acess(Terapeuta terapeuta)
-        {
-
-        }
-
-        public void See_history()
-        {
-
-        }
-
-        public void Check_date(DateTime data)
-        {
-            
-        }
     }
 }

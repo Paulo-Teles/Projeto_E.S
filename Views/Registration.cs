@@ -40,24 +40,6 @@ namespace RegistrationAndLogin
            
         }
 
-        private static void addUser()
-        {
-            Console.WriteLine("adding user ");
-            User usr = new User() { Name = "Sachin", Email = "sachin@gmail.com" };
-            try
-            {
-                using (var ctx = new EFContext())
-                {
-                    ctx.Users.Add(usr);
-                    ctx.SaveChanges();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
         private void BtnRegister_Click(object sender, EventArgs e)
         {
             if (txtconfirmpassword.Text != string.Empty && txtpassword.Text != string.Empty && txtusername.Text != string.Empty && txtaddress.Text != string.Empty && txtfirstname.Text != string.Empty && txtlastname.Text != string.Empty && txtphonenumber.Text != string.Empty && BornDate.Text != string.Empty && txtcc.Text != string.Empty)
@@ -69,7 +51,9 @@ namespace RegistrationAndLogin
                         {
                             using (var ctx = new EFContext())
                             {
-                                Utente utente = new Utente() { FirstName = txtfirstname.Text, Lastname = txtlastname.Text, Address = txtaddress.Text, Borndate = BornDate.Value, CC = txtcc.Text, Password = txtpassword.Text, Phonenumber = txtphonenumber.Text, Username = txtusername.Text };
+                                UserFactory factory = null;
+                                factory = new Utente(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
+                                Utente utente = new Utente(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
                                 ctx.Utentes.Add(utente);
                                 ctx.SaveChanges();
                             }
