@@ -19,8 +19,8 @@ namespace RegistrationAndLogin
         public List<Tratamento> Tratamentos { get; set; }
         public DateTime Validade { get; set; }
         */
-        public Utente Utente;
-        public User AutorTerapeuta;
+        public string CCUtente;
+        public string CCAutorTerapeuta;
         public string Terapeutas;
         public string Medicamentos;
         public string Exercicios;
@@ -30,9 +30,9 @@ namespace RegistrationAndLogin
         [Key]
         public int PrescricaoID { get; set; }
 
-        public Prescricao(Utente utente, User autorterapeuta, string terapeutas, string medicamentos, string exercicios, string tratamentos, DateTime validade){
-            Utente=utente;
-            AutorTerapeuta=autorterapeuta;
+        public Prescricao(string utente, string autorterapeuta, string terapeutas, string medicamentos, string exercicios, string tratamentos, DateTime validade){
+            CCUtente = utente;
+            CCAutorTerapeuta = autorterapeuta;
             Terapeutas= terapeutas;
             Medicamentos= medicamentos;
             Exercicios= exercicios;
