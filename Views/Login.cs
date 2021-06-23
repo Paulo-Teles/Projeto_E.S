@@ -33,27 +33,20 @@ namespace RegistrationAndLogin
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            UserFactory factory = null;
             using (var context = new EFContext())
             {
-                //var User = context.Utentes
-                 //  .Where(s => s.Username == txtusername.Text)
-                  // .FirstOrDefault<Utente>();
-                //Console.WriteLine("teste de username" +User.Username);
                 var CasoSejaUtente = context.Utentes.Where(utente => utente.Username == txtusername.Text).Where(utente => utente.Password == txtpassword.Text);
-
                 var CasoSejaTerapeuta = context.Terapeutas.Where(terapeuta => terapeuta.Username == txtusername.Text).Where(terapeuta => terapeuta.Password == txtpassword.Text);
-                if (CasoSejaUtente.Any())
+                if (CasoSejaUtente.FirstOrDefault() != null)
                 {
-                    factory = new UtenteFactory(CasoSejaUtente.ElementAt(0).Username, CasoSejaUtente.ElementAt(0).Password, CasoSejaUtente.ElementAt(0).Address, CasoSejaUtente.ElementAt(0).FirstName, CasoSejaUtente.ElementAt(0).Lastname, CasoSejaUtente.ElementAt(0).Phonenumber, CasoSejaUtente.ElementAt(0).Borndate, CasoSejaUtente.ElementAt(0).CC);
-                    User user = factory.GetUser();
+                    Sessao.Logged = new Utente(CasoSejaUtente.First().Username, CasoSejaUtente.First().Password, CasoSejaUtente.First().Address, CasoSejaUtente.First().FirstName, CasoSejaUtente.First().Lastname, CasoSejaUtente.First().Phonenumber, CasoSejaUtente.First().Borndate, CasoSejaUtente.First().CC);
                     this.Hide();
                     Utente_Home MenuUtente = new Utente_Home();
                     MenuUtente.ShowDialog();
                 }
-                if (CasoSejaTerapeuta.First().Username != String.Empty)
+                else if (CasoSejaTerapeuta.FirstOrDefault() != null)
                 {
-                    factory = new TerapeutaFactory(CasoSejaTerapeuta.Username, CasoSejaTerapeuta.Password, CasoSejaTerapeuta.Address, CasoSejaTerapeuta.FirstName, CasoSejaTerapeuta.Lastname, CasoSejaTerapeuta.Phonenumber, CasoSejaTerapeuta.Borndate, CasoSejaTerapeuta.CC);
+                    Sessao.Logged = new Terapeuta(CasoSejaTerapeuta.First().Username, CasoSejaTerapeuta.First().Password, CasoSejaTerapeuta.First().Address, CasoSejaTerapeuta.First().FirstName, CasoSejaTerapeuta.First().Lastname, CasoSejaTerapeuta.First().Phonenumber, CasoSejaTerapeuta.First().Borndate, CasoSejaTerapeuta.First().CC);
                     this.Hide();
                     Terapeuta_Home MenuTerapeuta = new Terapeuta_Home();
                     MenuTerapeuta.ShowDialog();

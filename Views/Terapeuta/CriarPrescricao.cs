@@ -13,9 +13,6 @@ namespace RegistrationAndLogin
 {
     public partial class CriarPrescricao : Form
     {
-        SqlCommand cmd;
-        SqlConnection cn;
-        SqlDataReader dr;
         public CriarPrescricao()
         {
             InitializeComponent();
@@ -23,9 +20,7 @@ namespace RegistrationAndLogin
 
         private void CriarPrescricao_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Desktop\Projeto_E.S\Database.mdf;Integrated Security=True");
-            cn.Open();
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,8 +30,8 @@ namespace RegistrationAndLogin
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "dd/MM/yyyy HH:mm";
+            DataPrescricao.Format = DateTimePickerFormat.Custom;
+            DataPrescricao.CustomFormat = "dd/MM/yyyy HH:mm";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -46,44 +41,21 @@ namespace RegistrationAndLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            if (textBox1.Text != string.Empty || textBox2.Text != string.Empty || textBox3.Text != string.Empty || textBox4.Text != string.Empty)
+            if(txtCCUtente.Text != string.Empty)
             {
-                
-                cmd = new SqlCommand("select * from LoginTable where username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'", cn);
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
+                using (var context = new EFContext())
                 {
-                    dr.Close();
-                    this.Hide();
-                    cmd.CommandText = "SELECT type FROM LoginTable WHERE username='" + txtusername.Text + "' and password='" + txtpassword.Text + "'";
-                    string str = Convert.ToString(cmd.ExecuteScalar());
-                    if (str.Equals("Utente"))
-                    {
-                        dr.Close();
-                        Utente_Home home = new Utente_Home();
-                        home.ShowDialog();
-                    }
-                    else
-                    {
-                        dr.Close();
-                        Terapeuta_Home home = new Terapeuta_Home();
-                        home.ShowDialog();
+                    var CCExiste = context.Utentes.Where(utente => utente.CC == txtCCUtente.Text);
+                    if (CCExiste.FirstOrDefault() != null) {
+                        Prescricao prescricao = new Prescricao(CCExiste.First(), Sessao.Logged , "", txtMedicamentos.Text, txtExercicios.Text, txtTratamentos.Text, DataPrescricao.Value );
+                        context.Prescricao.Add(prescricao);
+                        context.SaveChanges();
                     }
                 }
-                else
-                {
-                    dr.Close();
-                    MessageBox.Show("No Account available with this username and password ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
             }
-            else
-            {
-                MessageBox.Show("Please enter value in all field.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            */
-
+            this.Hide();
+            Terapeuta_Home MenuTerapeuta = new Terapeuta_Home();
+            MenuTerapeuta.ShowDialog();
         }
             
     }

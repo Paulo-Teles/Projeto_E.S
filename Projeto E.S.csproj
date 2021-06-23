@@ -81,12 +81,10 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Prescricao.cs" />
+    <Compile Include="Sessao.cs" />
     <Compile Include="TerapeutaCommand.cs" />
-    <Compile Include="TerapeutaFactory.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserFactory.cs" />
     <Compile Include="UtenteCommand.cs" />
-    <Compile Include="UtenteFactory.cs" />
     <Compile Include="Views\Utente\ConsultarPrescrições.cs">
       <SubType>Form</SubType>
     </Compile>

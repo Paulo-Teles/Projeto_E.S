@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace RegistrationAndLogin
 {
     public class Prescricao
     {
+        /*
         public int PrescricaoID { get; set; }
         public Utente Utente  { get; set; }
         public Terapeuta AutorTerapeuta { get; set; }
@@ -16,5 +18,29 @@ namespace RegistrationAndLogin
         public List<Exercicio> Exercicios { get; set; }
         public List<Tratamento> Tratamentos { get; set; }
         public DateTime Validade { get; set; }
+        */
+        public Utente Utente;
+        public User AutorTerapeuta;
+        public string Terapeutas;
+        public string Medicamentos;
+        public string Exercicios;
+        public string Tratamentos;
+        public DateTime Validade;
+
+        [Key]
+        public int PrescricaoID { get; set; }
+
+        public Prescricao(Utente utente, User autorterapeuta, string terapeutas, string medicamentos, string exercicios, string tratamentos, DateTime validade){
+            Utente=utente;
+            AutorTerapeuta=autorterapeuta;
+            Terapeutas= terapeutas;
+            Medicamentos= medicamentos;
+            Exercicios= exercicios;
+            Tratamentos= tratamentos;
+            Validade= validade;
+        }
+
+
+        public void Add_Medicamento() { }
     }
 }

@@ -19,7 +19,7 @@ namespace RegistrationAndLogin
         private DateTime _Borndate;
         private string _CC;
         [Key]
-        public int _TerapeutaID { get; set; }
+        public int TerapeutaID { get; set; }
         public Terapeuta(string username, string password, string address, string firstname, string lastname, string phonenumber, DateTime borndate, string cc)
         {
             _UserType = "Terapeuta";
@@ -31,6 +31,11 @@ namespace RegistrationAndLogin
             _Phonenumber = phonenumber;
             _Borndate = borndate;
             _CC = cc;
+        }
+
+        public Terapeuta()
+        {
+            
         }
 
         public override string UserType { get { return _UserType; } }
