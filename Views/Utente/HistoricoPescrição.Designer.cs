@@ -36,6 +36,8 @@ namespace RegistrationAndLogin
             // 
             // Informacao
             // 
+            this.Informacao.AllowUserToAddRows = false;
+            this.Informacao.AllowUserToDeleteRows = false;
             this.Informacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Informacao.Location = new System.Drawing.Point(32, 12);
             this.Informacao.Name = "Informacao";

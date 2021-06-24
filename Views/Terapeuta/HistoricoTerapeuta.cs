@@ -14,6 +14,7 @@ namespace RegistrationAndLogin
 {
     public partial class HistoricoTerapeuta : Form
     {
+        private EFContext context = new EFContext();
         public HistoricoTerapeuta()
         {
             InitializeComponent();
@@ -31,11 +32,9 @@ namespace RegistrationAndLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (var context = new EFContext())
-            {
-                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == pesquisa.Text).Where(terapeuta => terapeuta.Terapeuta == Sessao.Logged.Username || terapeuta.CCAutorTerapeuta == Sessao.Logged.CC).ToList();
-                Informacao.DataSource = Procurar;
-            }
+            List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == pesquisa.Text).Where(terapeuta => terapeuta.Terapeuta == Sessao.Logged.Username || terapeuta.CCAutorTerapeuta == Sessao.Logged.CC).ToList();
+            Informacao.DataSource = Procurar;
+            Informacao.DataSource = new BindingList<Prescricao>(Procurar.ToList());
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,6 +47,11 @@ namespace RegistrationAndLogin
             this.Hide();
             Terapeuta_Home MenuTerapeuta = new Terapeuta_Home();
             MenuTerapeuta.ShowDialog();
+        }
+
+        private void Salvar_Click(object sender, EventArgs e)
+        {
+            context.SaveChanges();
         }
     }
 }

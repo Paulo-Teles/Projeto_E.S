@@ -33,6 +33,7 @@ namespace RegistrationAndLogin
             this.button1 = new System.Windows.Forms.Button();
             this.Informacao = new System.Windows.Forms.DataGridView();
             this.Voltar = new System.Windows.Forms.Button();
+            this.Salvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Informacao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@ namespace RegistrationAndLogin
             // 
             // Voltar
             // 
-            this.Voltar.Location = new System.Drawing.Point(481, 28);
+            this.Voltar.Location = new System.Drawing.Point(609, 28);
             this.Voltar.Name = "Voltar";
             this.Voltar.Size = new System.Drawing.Size(152, 47);
             this.Voltar.TabIndex = 3;
@@ -74,11 +75,22 @@ namespace RegistrationAndLogin
             this.Voltar.UseVisualStyleBackColor = true;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
+            // Salvar
+            // 
+            this.Salvar.Location = new System.Drawing.Point(397, 28);
+            this.Salvar.Name = "Salvar";
+            this.Salvar.Size = new System.Drawing.Size(159, 46);
+            this.Salvar.TabIndex = 4;
+            this.Salvar.Text = "Salvar mudanças";
+            this.Salvar.UseVisualStyleBackColor = true;
+            this.Salvar.Click += new System.EventHandler(this.Salvar_Click);
+            // 
             // HistoricoTerapeuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Salvar);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.Informacao);
             this.Controls.Add(this.button1);
@@ -97,5 +109,6 @@ namespace RegistrationAndLogin
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView Informacao;
         private System.Windows.Forms.Button Voltar;
+        private System.Windows.Forms.Button Salvar;
     }
 }

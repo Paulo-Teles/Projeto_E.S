@@ -39,9 +39,10 @@ namespace RegistrationAndLogin
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(221, 43);
+            this.textBox1.Location = new System.Drawing.Point(166, 35);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 22);
+            this.textBox1.Size = new System.Drawing.Size(203, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Pesquisa";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -49,9 +50,10 @@ namespace RegistrationAndLogin
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(100, 43);
+            this.label1.Location = new System.Drawing.Point(75, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Terapeuta";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -59,18 +61,20 @@ namespace RegistrationAndLogin
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 89);
+            this.label2.Location = new System.Drawing.Point(75, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 17);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Data da Sessão";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(146, 240);
+            this.button1.Location = new System.Drawing.Point(78, 136);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 68);
+            this.button1.Size = new System.Drawing.Size(100, 55);
             this.button1.TabIndex = 5;
             this.button1.Text = "Voltar atrás";
             this.button1.UseVisualStyleBackColor = true;
@@ -78,9 +82,10 @@ namespace RegistrationAndLogin
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(441, 240);
+            this.button2.Location = new System.Drawing.Point(267, 136);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 68);
+            this.button2.Size = new System.Drawing.Size(102, 55);
             this.button2.TabIndex = 6;
             this.button2.Text = "Confirmar";
             this.button2.UseVisualStyleBackColor = true;
@@ -88,23 +93,25 @@ namespace RegistrationAndLogin
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(221, 89);
+            this.dateTimePicker1.Location = new System.Drawing.Point(166, 72);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(269, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(203, 20);
             this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // Disponibilizar_Prescrição
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 377);
+            this.ClientSize = new System.Drawing.Size(432, 237);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Disponibilizar_Prescrição";
             this.Text = "Disponibilizar_Prescrição";
             this.ResumeLayout(false);
