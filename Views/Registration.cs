@@ -52,8 +52,9 @@ namespace RegistrationAndLogin
                         {
                             using (var ctx = new EFContext())
                             {
-                                Utente utente = new Utente(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
-                                ctx.Utentes.Add(utente);
+                                var utenteRepo = new RepositoryUser<Utente>(ctx);
+                                var utente = new Utente(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
+                                utenteRepo.Insert(utente);
                                 ctx.SaveChanges();
                             }
                         }
@@ -69,8 +70,9 @@ namespace RegistrationAndLogin
                         {
                             using (var ctx = new EFContext())
                             {
-                                Terapeuta terapeuta = new Terapeuta(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
-                                ctx.Terapeutas.Add(terapeuta);
+                                var terapeutaRepo = new RepositoryUser<Terapeuta>(ctx);
+                                var terapeuta = new Terapeuta(txtusername.Text, txtpassword.Text, txtaddress.Text, txtfirstname.Text, txtlastname.Text, txtphonenumber.Text, BornDate.Value, txtcc.Text);
+                                terapeutaRepo.Insert(terapeuta);
                                 ctx.SaveChanges();
                             }
                         }

@@ -80,10 +80,12 @@
       <DependentUpon>202106241425300_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Prescricao.cs" />
     <Compile Include="Sessao.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="TerapeutaCommand.cs" />
+    <Compile Include="RepositoryUser.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UtenteCommand.cs" />
     <Compile Include="Views\Terapeuta\MenuSessao.cs">
