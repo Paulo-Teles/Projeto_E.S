@@ -53,8 +53,12 @@ namespace RegistrationAndLogin
         {
             using (var context = new EFContext())
             {
-                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == Sessao.Logged.CC).Where(data => data.Validade.ToString().Contains(AProcurar.Value.ToString())).ToList();
+                string procura = AProcurar.Value.ToString();
+                procura = procura.Substring(0, procura.Length - 9);
+                Console.WriteLine("prucra var " + procura);
+                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == Sessao.Logged.CC).Where(data => data.Validade.Contains(procura)).ToList();
                 Informacao.DataSource = Procurar;
+                Console.WriteLine("procurar " + AProcurar.Value.ToString().Substring(0, AProcurar.Value.ToString().Length - 9));
             }
         }
 

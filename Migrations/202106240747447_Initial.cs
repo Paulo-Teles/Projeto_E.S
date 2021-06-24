@@ -18,7 +18,7 @@
                     Medicamentos = c.String(),
                     Exercicios = c.String(),
                     Tratamentos = c.String(),
-                    Validade = c.DateTime(nullable: true),
+                    Validade = c.String()
                 })
                 .PrimaryKey(t => t.PrescricaoID);
 

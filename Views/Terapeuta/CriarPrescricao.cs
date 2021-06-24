@@ -50,7 +50,7 @@ namespace RegistrationAndLogin
                     if (CCExiste.FirstOrDefault() != null) {
                         using (var contextAdd = new EFContext())
                         {
-                            Prescricao prescricao = new Prescricao(CCExiste.First().CC, Sessao.Logged.CC, "", txtMedicamentos.Text, txtExercicios.Text, txtTratamentos.Text, DataPrescricao.Value);
+                            Prescricao prescricao = new Prescricao(CCExiste.First().CC, Sessao.Logged.CC, "", txtMedicamentos.Text, txtExercicios.Text, txtTratamentos.Text, DataPrescricao.Value.ToString());
                             contextAdd.Prescricaos.Add(prescricao);
                             contextAdd.SaveChanges();
                         }

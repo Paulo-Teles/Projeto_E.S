@@ -16,12 +16,12 @@ namespace RegistrationAndLogin
         public string Medicamentos { get; set; }
         public string Exercicios { get; set; }
         public string Tratamentos { get; set; }
-        public DateTime Validade { get;  set; }
+        public string Validade { get;  set; }
 
         [Key]
         public int PrescricaoID { get; set; }
 
-        public Prescricao(string utente, string autorterapeuta, string terapeutas, string medicamentos, string exercicios, string tratamentos, DateTime validade){
+        public Prescricao(string utente, string autorterapeuta, string terapeutas, string medicamentos, string exercicios, string tratamentos, string validade){
             CCUtente = utente;
             CCAutorTerapeuta = autorterapeuta;
             Terapeuta= terapeutas;

@@ -33,7 +33,7 @@ namespace RegistrationAndLogin
         {
             using (var context = new EFContext())
             {
-                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == pesquisa.Text).ToList();
+                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == pesquisa.Text).Where(terapeuta => terapeuta.Terapeuta == Sessao.Logged.Username || terapeuta.CCAutorTerapeuta == Sessao.Logged.CC).ToList();
                 Informacao.DataSource = Procurar;
             }
         }
