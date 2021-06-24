@@ -36,7 +36,13 @@ namespace RegistrationAndLogin
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MenuSessao Menu = new SessaoTerapeuta(); 
+            MenuSessao Menu = new MenuSessao();
+            Menu.ShowDialog();
+        }
+
+        private void Terapeuta_Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

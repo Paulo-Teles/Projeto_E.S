@@ -117,5 +117,5 @@ C:\Users\Admin\Desktop\ES projeto\ESProject\bin\Debug\EntityFramework.SqlServer.
 C:\Users\Admin\Desktop\ES projeto\ESProject\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Desktop\ES projeto\ESProject\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\Projeto E.S.csproj.CopyComplete
-C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Views.Terapeuta.SessaoTerapeuta.resources
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Migrations.Initial.resources
+C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.MenuSessao.resources

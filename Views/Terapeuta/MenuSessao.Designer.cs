@@ -1,5 +1,5 @@
 ﻿
-namespace RegistrationAndLogin.Views.Terapeuta
+namespace RegistrationAndLogin
 {
     partial class MenuSessao
     {
@@ -30,11 +30,12 @@ namespace RegistrationAndLogin.Views.Terapeuta
         private void InitializeComponent()
         {
             this.TratamentosAcesso = new System.Windows.Forms.DataGridView();
-            this.IdPrescricao = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PrescricaoID = new System.Windows.Forms.TextBox();
             this.Inserir = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Nota = new System.Windows.Forms.TextBox();
+            this.Voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.TratamentosAcesso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,16 +49,17 @@ namespace RegistrationAndLogin.Views.Terapeuta
             this.TratamentosAcesso.ReadOnly = true;
             this.TratamentosAcesso.Size = new System.Drawing.Size(770, 88);
             this.TratamentosAcesso.TabIndex = 0;
+            this.TratamentosAcesso.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TratamentosAcesso_CellContentClick);
             // 
-            // IdPrescricao
+            // label
             // 
-            this.IdPrescricao.AutoSize = true;
-            this.IdPrescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.IdPrescricao.Location = new System.Drawing.Point(16, 132);
-            this.IdPrescricao.Name = "IdPrescricao";
-            this.IdPrescricao.Size = new System.Drawing.Size(122, 20);
-            this.IdPrescricao.TabIndex = 1;
-            this.IdPrescricao.Text = "Id da prescrição";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label.Location = new System.Drawing.Point(16, 132);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(122, 20);
+            this.label.TabIndex = 1;
+            this.label.Text = "Id da prescrição";
             // 
             // label1
             // 
@@ -69,43 +71,56 @@ namespace RegistrationAndLogin.Views.Terapeuta
             this.label1.TabIndex = 2;
             this.label1.Text = "Notas:";
             // 
-            // textBox1
+            // PrescricaoID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.textBox1.Location = new System.Drawing.Point(144, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 20);
-            this.textBox1.TabIndex = 3;
+            this.PrescricaoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.PrescricaoID.Location = new System.Drawing.Point(144, 134);
+            this.PrescricaoID.Name = "PrescricaoID";
+            this.PrescricaoID.Size = new System.Drawing.Size(187, 20);
+            this.PrescricaoID.TabIndex = 3;
             // 
             // Inserir
             // 
-            this.Inserir.Location = new System.Drawing.Point(582, 261);
+            this.Inserir.Location = new System.Drawing.Point(583, 225);
             this.Inserir.Name = "Inserir";
             this.Inserir.Size = new System.Drawing.Size(163, 48);
             this.Inserir.TabIndex = 4;
             this.Inserir.Text = "Inserir";
             this.Inserir.UseVisualStyleBackColor = true;
+            this.Inserir.Click += new System.EventHandler(this.Inserir_Click);
             // 
-            // textBox2
+            // Nota
             // 
-            this.textBox2.Location = new System.Drawing.Point(18, 204);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(480, 205);
-            this.textBox2.TabIndex = 5;
+            this.Nota.Location = new System.Drawing.Point(18, 204);
+            this.Nota.Multiline = true;
+            this.Nota.Name = "Nota";
+            this.Nota.Size = new System.Drawing.Size(480, 205);
+            this.Nota.TabIndex = 5;
+            this.Nota.TextChanged += new System.EventHandler(this.Nota_TextChanged);
             // 
-            // SessaoTerapeuta
+            // Voltar
+            // 
+            this.Voltar.Location = new System.Drawing.Point(584, 309);
+            this.Voltar.Name = "Voltar";
+            this.Voltar.Size = new System.Drawing.Size(161, 48);
+            this.Voltar.TabIndex = 6;
+            this.Voltar.Text = "Voltar ao menu";
+            this.Voltar.UseVisualStyleBackColor = true;
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            // 
+            // MenuSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Voltar);
+            this.Controls.Add(this.Nota);
             this.Controls.Add(this.Inserir);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PrescricaoID);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.IdPrescricao);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.TratamentosAcesso);
-            this.Name = "SessaoTerapeuta";
+            this.Name = "MenuSessao";
             this.Text = "SessaoTerapeuta";
             this.Load += new System.EventHandler(this.SessaoTerapeuta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TratamentosAcesso)).EndInit();
@@ -117,10 +132,11 @@ namespace RegistrationAndLogin.Views.Terapeuta
         #endregion
 
         private System.Windows.Forms.DataGridView TratamentosAcesso;
-        private System.Windows.Forms.Label IdPrescricao;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PrescricaoID;
         private System.Windows.Forms.Button Inserir;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Nota;
+        private System.Windows.Forms.Button Voltar;
     }
 }

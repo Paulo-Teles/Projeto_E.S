@@ -52,7 +52,7 @@ namespace RegistrationAndLogin
             // 
             this.AProcurar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.AProcurar.Location = new System.Drawing.Point(95, 39);
-            this.AProcurar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AProcurar.Margin = new System.Windows.Forms.Padding(2);
             this.AProcurar.Name = "AProcurar";
             this.AProcurar.Size = new System.Drawing.Size(151, 20);
             this.AProcurar.TabIndex = 3;
@@ -62,7 +62,7 @@ namespace RegistrationAndLogin
             // btnVoltaratras
             // 
             this.btnVoltaratras.Location = new System.Drawing.Point(283, 457);
-            this.btnVoltaratras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoltaratras.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltaratras.Name = "btnVoltaratras";
             this.btnVoltaratras.Size = new System.Drawing.Size(80, 59);
             this.btnVoltaratras.TabIndex = 6;
@@ -72,9 +72,12 @@ namespace RegistrationAndLogin
             // 
             // Informacao
             // 
+            this.Informacao.AllowUserToAddRows = false;
+            this.Informacao.AllowUserToDeleteRows = false;
             this.Informacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Informacao.Location = new System.Drawing.Point(50, 96);
             this.Informacao.Name = "Informacao";
+            this.Informacao.ReadOnly = true;
             this.Informacao.Size = new System.Drawing.Size(541, 330);
             this.Informacao.TabIndex = 7;
             this.Informacao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -99,7 +102,7 @@ namespace RegistrationAndLogin
             this.Controls.Add(this.btnVoltaratras);
             this.Controls.Add(this.AProcurar);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConsultarPrescrições";
             this.Text = "ConsultarPrescrições";
             ((System.ComponentModel.ISupportInitialize)(this.Informacao)).EndInit();
