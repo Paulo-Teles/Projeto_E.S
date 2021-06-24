@@ -53,5 +53,10 @@ namespace RegistrationAndLogin
         {
             context.SaveChanges();
         }
+
+        private void HistoricoTerapeuta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

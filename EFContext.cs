@@ -12,5 +12,6 @@ namespace RegistrationAndLogin
         public DbSet<Terapeuta> Terapeutas { get; set; }
         public DbSet<Utente> Utentes { get; set; }
         public DbSet<Prescricao> Prescricaos { get; set; }
+        public DbSet<Session> Sessions { get; set; }
     }
 }

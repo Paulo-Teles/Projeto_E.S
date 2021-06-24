@@ -46,7 +46,7 @@ namespace RegistrationAndLogin
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(108, 153);
+            this.button3.Location = new System.Drawing.Point(108, 144);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(196, 67);
             this.button3.TabIndex = 2;
@@ -62,6 +62,7 @@ namespace RegistrationAndLogin
             this.button4.TabIndex = 3;
             this.button4.Text = "Sessão de tratamento";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Terapeuta_Home
             // 

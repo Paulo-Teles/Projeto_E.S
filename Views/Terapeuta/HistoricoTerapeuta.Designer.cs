@@ -97,6 +97,7 @@ namespace RegistrationAndLogin
             this.Controls.Add(this.pesquisa);
             this.Name = "HistoricoTerapeuta";
             this.Text = "HistoricoTerapeuta";
+            this.Load += new System.EventHandler(this.HistoricoTerapeuta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Informacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

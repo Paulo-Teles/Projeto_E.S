@@ -75,21 +75,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFContext.cs" />
-    <Compile Include="Migrations\202106240747447_Initial.cs" />
-    <Compile Include="Migrations\202106240747447_Initial.designer.cs">
-      <DependentUpon>202106240747447_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202106241425300_Initial.cs" />
+    <Compile Include="Migrations\202106241425300_Initial.designer.cs">
+      <DependentUpon>202106241425300_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Prescricao.cs" />
     <Compile Include="Sessao.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="TerapeutaCommand.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UtenteCommand.cs" />
-    <Compile Include="Views\Terapeuta\SessaoTerapeuta.cs">
+    <Compile Include="Views\Terapeuta\MenuSessao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Terapeuta\SessaoTerapeuta.Designer.cs">
-      <DependentUpon>SessaoTerapeuta.cs</DependentUpon>
+    <Compile Include="Views\Terapeuta\MenuSessao.Designer.cs">
+      <DependentUpon>MenuSessao.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Utente\ConsultarPrescrições.cs">
       <SubType>Form</SubType>
@@ -109,7 +110,6 @@
     <Compile Include="Views\Terapeuta\CriarPrescricao.Designer.cs">
       <DependentUpon>CriarPrescricao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Exercicio.cs" />
     <Compile Include="Views\Terapeuta\HistoricoTerapeuta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,7 +118,6 @@
     </Compile>
     <Compile Include="ICommand.cs" />
     <Compile Include="Invoker.cs" />
-    <Compile Include="Medicamento.cs" />
     <Compile Include="Terapeuta.cs" />
     <Compile Include="Views\Terapeuta\Terapeuta_Home.cs">
       <SubType>Form</SubType>
@@ -126,7 +125,6 @@
     <Compile Include="Views\Terapeuta\Terapeuta_Home.Designer.cs">
       <DependentUpon>Terapeuta_Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tratamento.cs" />
     <Compile Include="Utente.cs" />
     <Compile Include="Views\Utente\Utente_Home.cs">
       <SubType>Form</SubType>
@@ -148,8 +146,8 @@
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202106240747447_Initial.resx">
-      <DependentUpon>202106240747447_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106241425300_Initial.resx">
+      <DependentUpon>202106241425300_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Terapeuta\CriarPrescricao.resx">
       <DependentUpon>CriarPrescricao.cs</DependentUpon>
@@ -157,8 +155,8 @@
     <EmbeddedResource Include="Views\Terapeuta\HistoricoTerapeuta.resx">
       <DependentUpon>HistoricoTerapeuta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Terapeuta\SessaoTerapeuta.resx">
-      <DependentUpon>SessaoTerapeuta.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Terapeuta\MenuSessao.resx">
+      <DependentUpon>MenuSessao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Terapeuta\Terapeuta_Home.resx">
       <DependentUpon>Terapeuta_Home.cs</DependentUpon>

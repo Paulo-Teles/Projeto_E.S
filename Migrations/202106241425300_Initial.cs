@@ -10,18 +10,28 @@
             CreateTable(
                 "dbo.Prescricaos",
                 c => new
-                {
-                    PrescricaoID = c.Int(nullable: false, identity: true),
-                    CCUtente = c.String(),
-                    CCAutorTerapeuta = c.String(),
-                    Terapeuta = c.String(),
-                    Medicamentos = c.String(),
-                    Exercicios = c.String(),
-                    Tratamentos = c.String(),
-                    Validade = c.String()
-                })
+                    {
+                        PrescricaoID = c.Int(nullable: false, identity: true),
+                        CCUtente = c.String(),
+                        CCAutorTerapeuta = c.String(),
+                        Terapeuta = c.String(),
+                        Medicamentos = c.String(),
+                        Exercicios = c.String(),
+                        Tratamentos = c.String(),
+                        Validade = c.String(),
+                    })
                 .PrimaryKey(t => t.PrescricaoID);
-
+            
+            CreateTable(
+                "dbo.Sessions",
+                c => new
+                    {
+                        UtenteID = c.Int(nullable: false, identity: true),
+                        IdDaPrescricao = c.Int(nullable: false),
+                        Notas = c.String(),
+                    })
+                .PrimaryKey(t => t.UtenteID);
+            
             CreateTable(
                 "dbo.Terapeutas",
                 c => new
@@ -60,6 +70,7 @@
         {
             DropTable("dbo.Utentes");
             DropTable("dbo.Terapeutas");
+            DropTable("dbo.Sessions");
             DropTable("dbo.Prescricaos");
         }
     }
