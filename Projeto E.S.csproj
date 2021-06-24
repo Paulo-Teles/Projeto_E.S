@@ -157,6 +157,9 @@
     <EmbeddedResource Include="Views\Terapeuta\HistoricoTerapeuta.resx">
       <DependentUpon>HistoricoTerapeuta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Terapeuta\SessaoTerapeuta.resx">
+      <DependentUpon>SessaoTerapeuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Terapeuta\Terapeuta_Home.resx">
       <DependentUpon>Terapeuta_Home.cs</DependentUpon>
     </EmbeddedResource>

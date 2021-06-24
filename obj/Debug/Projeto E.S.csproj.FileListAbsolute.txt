@@ -100,7 +100,6 @@ C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Criar
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.HistoricoTerapeuta.resources
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Terapeuta_Home.resources
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.ConsultarPrescrições.resources
-C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Disponibilizar_Prescrição.resources
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.HistoricoPescrição.resources
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Utente_Home.resources
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Login.resources
@@ -119,3 +118,4 @@ C:\Users\Admin\Desktop\ES projeto\ESProject\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Desktop\ES projeto\ESProject\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\Projeto E.S.csproj.CopyComplete
 C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Migrations.Initial.resources
+C:\Users\Admin\Desktop\ES projeto\ESProject\obj\Debug\RegistrationAndLogin.Views.Terapeuta.SessaoTerapeuta.resources

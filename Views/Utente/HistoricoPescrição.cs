@@ -33,5 +33,25 @@ namespace RegistrationAndLogin
             Utente_Home MenuUtente = new Utente_Home();
             MenuUtente.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var context = new EFContext())
+            {
+                var AModificar = context.Prescricaos.Where(prescricao => prescricao.PrescricaoID.ToString() == IdPrescricao.Text );
+                if(AModificar != null)
+                {
+                    AModificar.First().Terapeuta = NovoTerapeuta.Text;
+                }
+                context.SaveChanges();
+                
+            }
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
