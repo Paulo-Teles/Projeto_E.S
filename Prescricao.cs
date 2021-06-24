@@ -9,23 +9,14 @@ namespace RegistrationAndLogin
 {
     public class Prescricao
     {
-        /*
-        public int PrescricaoID { get; set; }
-        public Utente Utente  { get; set; }
-        public Terapeuta AutorTerapeuta { get; set; }
-        public List<Terapeuta> Terapeutas { get; set; }
-        public List<Medicamento> Medicamentos { get; set; }
-        public List<Exercicio> Exercicios { get; set; }
-        public List<Tratamento> Tratamentos { get; set; }
-        public DateTime Validade { get; set; }
-        */
-        public string CCUtente;
-        public string CCAutorTerapeuta;
-        public string Terapeutas;
-        public string Medicamentos;
-        public string Exercicios;
-        public string Tratamentos;
-        public DateTime Validade;
+        
+        public string CCUtente { get; set; }
+        public string CCAutorTerapeuta { get; set; }
+        public string Terapeuta { get; set; }
+        public string Medicamentos { get; set; }
+        public string Exercicios { get; set; }
+        public string Tratamentos { get; set; }
+        public DateTime Validade { get;  set; }
 
         [Key]
         public int PrescricaoID { get; set; }
@@ -33,13 +24,17 @@ namespace RegistrationAndLogin
         public Prescricao(string utente, string autorterapeuta, string terapeutas, string medicamentos, string exercicios, string tratamentos, DateTime validade){
             CCUtente = utente;
             CCAutorTerapeuta = autorterapeuta;
-            Terapeutas= terapeutas;
+            Terapeuta= terapeutas;
             Medicamentos= medicamentos;
             Exercicios= exercicios;
             Tratamentos= tratamentos;
             Validade= validade;
         }
 
+        private Prescricao()
+        {
+            
+        }
 
         public void Add_Medicamento() { }
     }

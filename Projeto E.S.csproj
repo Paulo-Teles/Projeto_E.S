@@ -75,9 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EFContext.cs" />
-    <Compile Include="Migrations\202106232038551_Initial.cs" />
-    <Compile Include="Migrations\202106232038551_Initial.designer.cs">
-      <DependentUpon>202106232038551_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202106240747447_Initial.cs" />
+    <Compile Include="Migrations\202106240747447_Initial.designer.cs">
+      <DependentUpon>202106240747447_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Prescricao.cs" />
@@ -148,8 +148,8 @@
     <Compile Include="Views\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202106232038551_Initial.resx">
-      <DependentUpon>202106232038551_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106240747447_Initial.resx">
+      <DependentUpon>202106240747447_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Terapeuta\CriarPrescricao.resx">
       <DependentUpon>CriarPrescricao.cs</DependentUpon>

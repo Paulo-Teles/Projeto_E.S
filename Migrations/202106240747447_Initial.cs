@@ -21,7 +21,7 @@
                     Validade = c.DateTime(nullable: true),
                 })
                 .PrimaryKey(t => t.PrescricaoID);
-            
+
             CreateTable(
                 "dbo.Terapeutas",
                 c => new
