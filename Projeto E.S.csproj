@@ -85,6 +85,12 @@
     <Compile Include="TerapeutaCommand.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UtenteCommand.cs" />
+    <Compile Include="Views\Terapeuta\SessaoTerapeuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Terapeuta\SessaoTerapeuta.Designer.cs">
+      <DependentUpon>SessaoTerapeuta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Utente\ConsultarPrescrições.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,12 +102,6 @@
     </Compile>
     <Compile Include="Views\Utente\HistoricoPescrição.Designer.cs">
       <DependentUpon>HistoricoPescrição.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Utente\DisponibilizarPrescrição.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Utente\DisponibilizarPrescrição.Designer.cs">
-      <DependentUpon>DisponibilizarPrescrição.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Terapeuta\CriarPrescricao.cs">
       <SubType>Form</SubType>
@@ -162,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Utente\ConsultarPrescrições.resx">
       <DependentUpon>ConsultarPrescrições.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Utente\DisponibilizarPrescrição.resx">
-      <DependentUpon>DisponibilizarPrescrição.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Utente\HistoricoPescrição.resx">
       <DependentUpon>HistoricoPescrição.cs</DependentUpon>
