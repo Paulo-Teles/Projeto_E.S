@@ -37,9 +37,9 @@ namespace RegistrationAndLogin
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(287, 47);
+            this.button1.Location = new System.Drawing.Point(108, 49);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 76);
+            this.button1.Size = new System.Drawing.Size(196, 67);
             this.button1.TabIndex = 0;
             this.button1.Text = "Criar prescrição";
             this.button1.UseVisualStyleBackColor = true;
@@ -47,18 +47,18 @@ namespace RegistrationAndLogin
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(287, 147);
+            this.button2.Location = new System.Drawing.Point(108, 138);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 63);
+            this.button2.Size = new System.Drawing.Size(196, 67);
             this.button2.TabIndex = 1;
             this.button2.Text = "Alterar prescrição";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(287, 232);
+            this.button3.Location = new System.Drawing.Point(108, 223);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 65);
+            this.button3.Size = new System.Drawing.Size(196, 67);
             this.button3.TabIndex = 2;
             this.button3.Text = "Consultar histórico";
             this.button3.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@ namespace RegistrationAndLogin
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(286, 335);
+            this.button4.Location = new System.Drawing.Point(108, 310);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 66);
+            this.button4.Size = new System.Drawing.Size(196, 67);
             this.button4.TabIndex = 3;
             this.button4.Text = "Sessão de tratamento";
             this.button4.UseVisualStyleBackColor = true;
@@ -77,7 +77,7 @@ namespace RegistrationAndLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(423, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

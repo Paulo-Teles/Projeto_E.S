@@ -24,7 +24,9 @@ namespace RegistrationAndLogin
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Utente_Home MenuUtente = new Utente_Home();
+            MenuUtente.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)

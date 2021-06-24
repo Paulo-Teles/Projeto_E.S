@@ -15,16 +15,23 @@ namespace RegistrationAndLogin
         public HistoricoPescrição()
         {
             InitializeComponent();
+            using (var context = new EFContext())
+            {
+                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == Sessao.Logged.CC).ToList();
+                Informacao.DataSource = Procurar;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Informacao_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Voltar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Utente_Home MenuUtente = new Utente_Home();
+            MenuUtente.ShowDialog();
         }
     }
 }

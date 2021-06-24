@@ -50,7 +50,7 @@ namespace RegistrationAndLogin
                     if (CCExiste.FirstOrDefault() != null) {
                         using (var contextAdd = new EFContext())
                         {
-                            Prescricao prescricao = new Prescricao(CCExiste.First().CC, Sessao.Logged.CC, "teste", txtMedicamentos.Text, txtExercicios.Text, txtTratamentos.Text, DataPrescricao.Value);
+                            Prescricao prescricao = new Prescricao(CCExiste.First().CC, Sessao.Logged.CC, "", txtMedicamentos.Text, txtExercicios.Text, txtTratamentos.Text, DataPrescricao.Value);
                             contextAdd.Prescricaos.Add(prescricao);
                             contextAdd.SaveChanges();
                         }
@@ -61,6 +61,12 @@ namespace RegistrationAndLogin
             Terapeuta_Home MenuTerapeuta = new Terapeuta_Home();
             MenuTerapeuta.ShowDialog();
         }
-            
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Terapeuta_Home MenuTerapeuta = new Terapeuta_Home();
+            MenuTerapeuta.ShowDialog();
+        }
     }
 }
