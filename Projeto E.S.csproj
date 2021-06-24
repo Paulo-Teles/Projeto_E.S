@@ -97,11 +97,11 @@
     <Compile Include="Views\Utente\HistoricoPescrição.Designer.cs">
       <DependentUpon>HistoricoPescrição.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Utente\Disponibilizar Prescrição.cs">
+    <Compile Include="Views\Utente\DisponibilizarPrescrição.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Utente\Disponibilizar Prescrição.Designer.cs">
-      <DependentUpon>Disponibilizar Prescrição.cs</DependentUpon>
+    <Compile Include="Views\Utente\DisponibilizarPrescrição.Designer.cs">
+      <DependentUpon>DisponibilizarPrescrição.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Terapeuta\CriarPrescricao.cs">
       <SubType>Form</SubType>
@@ -163,8 +163,8 @@
     <EmbeddedResource Include="Views\Utente\ConsultarPrescrições.resx">
       <DependentUpon>ConsultarPrescrições.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Utente\Disponibilizar Prescrição.resx">
-      <DependentUpon>Disponibilizar Prescrição.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Utente\DisponibilizarPrescrição.resx">
+      <DependentUpon>DisponibilizarPrescrição.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Utente\HistoricoPescrição.resx">
       <DependentUpon>HistoricoPescrição.cs</DependentUpon>

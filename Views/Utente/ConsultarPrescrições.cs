@@ -48,5 +48,19 @@ namespace RegistrationAndLogin
         {
 
         }
+
+        private void Procurar_Click(object sender, EventArgs e)
+        {
+            using (var context = new EFContext())
+            {
+                List<Prescricao> Procurar = context.Prescricaos.Where(prescricao => prescricao.CCUtente == Sessao.Logged.CC).Where(data => data.Validade.ToString().Contains(AProcurar.Value.ToString())).ToList();
+                Informacao.DataSource = Procurar;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
