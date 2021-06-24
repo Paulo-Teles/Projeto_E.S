@@ -84,10 +84,8 @@
     <Compile Include="Prescricao.cs" />
     <Compile Include="Sessao.cs" />
     <Compile Include="Session.cs" />
-    <Compile Include="TerapeutaCommand.cs" />
     <Compile Include="RepositoryUser.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UtenteCommand.cs" />
     <Compile Include="Views\Terapeuta\MenuSessao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,8 +116,6 @@
     <Compile Include="Views\Terapeuta\HistoricoTerapeuta.Designer.cs">
       <DependentUpon>HistoricoTerapeuta.cs</DependentUpon>
     </Compile>
-    <Compile Include="ICommand.cs" />
-    <Compile Include="Invoker.cs" />
     <Compile Include="Terapeuta.cs" />
     <Compile Include="Views\Terapeuta\Terapeuta_Home.cs">
       <SubType>Form</SubType>
